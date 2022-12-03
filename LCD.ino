@@ -43,7 +43,7 @@ void LCD_Init (void)			/* LCD Initialize function */
   RS_EN_Dir |= (1 << EN) | (1 << RS);
 
 	_delay_ms(20);			    /* LCD Power ON delay always >15ms */
-	
+
 	LCD_Command(0x02);		  /* send for 4 bit initialization of LCD  */
 	LCD_Command(0x28);      /* 2 line, 5*7 matrix in 4-bit mode */
 	LCD_Command(0x0c);      /* Display on cursor off*/
@@ -67,7 +67,7 @@ void LCD_String_xy (char row, char pos, char *str)	/* Send string to LCD with xy
 	  LCD_Command((pos & 0x0F)|0x80);	                  /* Command of first row and required position<16 */
 	else if (row == 1 && pos<16)
 	  LCD_Command((pos & 0x0F)|0xC0);	                  /* Command of first row and required position<16 */
-    
+
 	LCD_String(str);	                              	/* Call LCD string function */
 }
 
