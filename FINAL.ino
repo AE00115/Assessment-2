@@ -24,7 +24,7 @@ unsigned char dwn[7];
 // Upper limit = counter
 int counter = 17 ; // giving the upper limit starting value of 17
 // Lower limit = counter2
-int counter2 = 14 ;// giving the upper lower starting value of 14
+int counter2 = 14 ;// giving the lower limit starting value of 14
 float celsius;  
 
   init(); // For initialization
